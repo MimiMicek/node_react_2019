@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <button id="aboutme">About Me</button>
+
+    <div id="pagewrapper"></div>
+
+    <script>
+        // create a link or a button once clicked 
+        // call a GET request with AJAX
+        // that returns the about me info from the server
+        // then take the response and display it on the page 
+        
+        $(document).ready(() => {
+            // add event handler for about me button
+            let aboutmeIsClicked = true;
+            $("#aboutme").click((event) => {
+                if (aboutmeIsClicked) {
+                    $.get("/aboutme", (data) => { 
+                        $("#pagewrapper").append("<div>First name: " + data.firstName + "</div>")
+                        $("#pagewrapper").append("<div>Last name: " + data.lastName + "</div>")
+                    });
+                } else {
+                    $("#pagewrapper").empty();  
+                }
+                aboutmeIsClicked = !aboutmeIsClicked;
+            });
+        });
+
+        // create a form that posts to a new request handler on the server
+        // this request handler should be called POST /aboutme
+        // the /aboutme should receive a body with a new firstName and lastName
+
+        // bonus: once posted to /aboutme it should change the now global aboutme variable 
+        // and calling GET /aboutme should allow for a different result
+
+    </script>
+</body>
+</html>

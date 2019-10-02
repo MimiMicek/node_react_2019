@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #search-bar {
+            width: 100%;
+            height: 40px;
+            font-size: 1.5em;
+        }
+        #search-btn {
+            width: 100%;
+            height: 80px;
+        }
+    </style>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <!-- Create a search field 
+        and a button and listen to the enter key -->
+    <input id="search-bar" type="text" placeholder="Search for people">
+    <button id="search-btn">Search</button>
+    
+    <script>
+    // enter key pressed
+    $('#search-bar').keypress((event) => {
+	
+        const keycode = (event.keyCode ? event.keyCode : event.which);
+        // keycode for enter = 13
+        if (keycode == '13') {
+            search();
+        }
+    });
+
+    // search button pressed
+    $('#search-btn').click(() => {
+        search();
+    })
+
+    function search() {
+        alert('You pressed a "enter" key in textbox');	
+    }
+    
+    </script>
+</body>
+</html>
