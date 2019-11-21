@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.19.5",
+    "mysql2": "^1.7.0",
+    "nodemon": "^1.19.3",
+    "objection": "^1.6.11"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "start-dev": "ENVIRONMENT=dev node app.js",
+    "start-prod": "ENVIRONMENT=prod node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migration:make": "knex migrate:make migration_name",
+    "migrate:run": "knex migrate:latest",
+    "migrate:rollback": "knex migrate:rollback",
+    "seed:make": "knex seed:make",
+    "seed:run": "knex seed:run"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

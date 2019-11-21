@@ -1,17 +1,27 @@
 {
   "name": "first_react_project",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://mirjanaerceg.github.io",
+  "private": false,
   "dependencies": {
-    "react": "^16.9.0",
+    "@emotion/core": "^10.0.21",
+    "express": "^4.17.1",
+    "jsx": "^0.9.89",
+    "nodemon": "^1.19.3",
+    "react": "^16.10.1",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.2"
+    "react-icons": "^3.7.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.1.2",
+    "react-spinners": "^0.6.1",
+    "react-table": "^6.10.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish": "node ghpages.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-emotion": "^10.0.21",
+    "gh-pages": "^2.1.1"
   }
 }
