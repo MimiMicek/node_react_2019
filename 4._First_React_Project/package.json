@@ -5,7 +5,7 @@
   "private": false,
   "dependencies": {
     "@emotion/core": "^10.0.21",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jsx": "^0.9.89",
     "nodemon": "^1.19.3",
     "react": "^16.10.1",
